@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "MsyCSA4ypj7/hdLvE17LmgO2gcoqhQH5iMsufsS/TWQ=",
+  "Source": "HeathCare",
+  "BasePath": "_content/HeathCare",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HeathCare\\wwwroot",
+      "Source": "HeathCare",
+      "ContentRoot": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\_IMG_20230208_133451.jpg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "photos/_IMG_20230208_133451.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\_IMG_20230208_133451.jpg"
+    },
+    {
+      "Identity": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\yuwyu_IMG_20230505_090741.jpg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "photos/yuwyu_IMG_20230505_090741.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\yuwyu_IMG_20230505_090741.jpg"
+    }
+  ]
+}
