@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JdlPJym0yPFCcDuKLf7yDZ3arJbITOKS1A5ZhzmHyqA=",
+  "Hash": "ZoMJU3AMkE+BeHVJK4/vHf0VhQgh7YUAtBfdmVuhxUw=",
   "Source": "HeathCare",
   "BasePath": "_content/HeathCare",
   "Mode": "Default",
@@ -36,6 +36,25 @@
       "OriginalItemSpec": "wwwroot\\photos\\Admins\\_IMG_20230505_090741.jpg"
     },
     {
+      "Identity": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\Doctors\\_IMG_20230208_133451.jpg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "photos/Doctors/_IMG_20230208_133451.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\Doctors\\_IMG_20230208_133451.jpg"
+    },
+    {
       "Identity": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\Doctors\\_IMG_20230505_090741.jpg",
       "SourceId": "HeathCare",
       "SourceType": "Discovered",
@@ -53,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\photos\\Doctors\\_IMG_20230505_090741.jpg"
+    },
+    {
+      "Identity": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\Posts\\_IMG_20230505_090741.jpg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "photos/Posts/_IMG_20230505_090741.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\Posts\\_IMG_20230505_090741.jpg"
     }
   ]
 }

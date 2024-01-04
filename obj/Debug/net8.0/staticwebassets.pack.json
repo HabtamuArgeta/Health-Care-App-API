@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\photos\\Admins\\_IMG_20230505_090741.jpg"
     },
     {
+      "Id": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\Doctors\\_IMG_20230208_133451.jpg",
+      "PackagePath": "staticwebassets\\photos\\Doctors\\_IMG_20230208_133451.jpg"
+    },
+    {
       "Id": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\Doctors\\_IMG_20230505_090741.jpg",
       "PackagePath": "staticwebassets\\photos\\Doctors\\_IMG_20230505_090741.jpg"
+    },
+    {
+      "Id": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\wwwroot\\photos\\Posts\\_IMG_20230505_090741.jpg",
+      "PackagePath": "staticwebassets\\photos\\Posts\\_IMG_20230505_090741.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HeathCare.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace HeathCare.Models
 {
@@ -17,15 +18,17 @@ namespace HeathCare.Models
         public string Address { get; set; }
 
         [BsonElement("dateOfBirth")]
-        public string DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         [BsonElement("email")]
+        [EmailAddress]
         public string Email { get; set; }
 
         [BsonElement("gender")]
         public string Gender { get; set; }
 
         [BsonElement("phone")]
+        [Phone]
         public string Phone { get; set; }
 
         [BsonElement("photoUrl")]

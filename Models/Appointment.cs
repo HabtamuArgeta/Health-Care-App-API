@@ -11,7 +11,7 @@ namespace HeathCare.Models
         public string? Id { get; set; }
 
         [BsonElement("date")]
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
         [BsonElement("doctorId")]
         public ObjectId? DoctorId { get; set; } // Reference to Doctor
@@ -19,8 +19,7 @@ namespace HeathCare.Models
         [BsonElement("patientId")]
         public ObjectId? PatientId { get; set; } // Reference to Patient
 
-        [BsonElement("timeRange")]
-        public string TimeRange { get; set; }
+        
     }
 
 }
