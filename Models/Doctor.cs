@@ -8,7 +8,7 @@ namespace HeathCare.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         [BsonElement("name")]
         public string Name { get; set; }
@@ -21,9 +21,6 @@ namespace HeathCare.Models
 
         [BsonElement("availableDate")]
         public DateTime AvailableDate { get; set; }
-
-        [BsonElement("availableTimestamp")]
-        public DateTime AvailableTimestamp { get; set; }
 
         [BsonElement("email")]
         public string Email { get; set; }
@@ -38,13 +35,13 @@ namespace HeathCare.Models
         public string? PhotoUrl { get; set; }
 
         [BsonElement("appointments")]
-        public List<ObjectId> Appointments { get; set; } // References to Appointments
+        public List<ObjectId>? Appointments { get; set; } // References to Appointments
 
         [BsonElement("chats")]
-        public List<ObjectId> Chats { get; set; } // References to Chats
+        public List<ObjectId>? Chats { get; set; } // References to Chats
 
         [BsonElement("posts")]
-        public List<ObjectId> Posts { get; set; } // References to Posts
+        public List<ObjectId>? Posts { get; set; } // References to Posts
     }
 
 }

@@ -76,6 +76,10 @@ builder.Services.AddSingleton<IMongoClient>(s =>
 
 builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IPostService, PostService>();
 
 
 

@@ -13,8 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\photos\Admin\" />
-    <Folder Include="wwwroot\photos\Patient\" />
+    <Folder Include="wwwroot\photos\Admins\" />
+    <Folder Include="wwwroot\photos\Doctors\" />
+    <Folder Include="wwwroot\photos\Posts\" />
+    <Folder Include="wwwroot\photos\Patients\" />
   </ItemGroup>
 
 </Project>

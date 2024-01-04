@@ -8,10 +8,10 @@ namespace HeathCare.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         [BsonElement("postPhoto")]
-        public string PostPhoto { get; set; }
+        public string? PhotoUrl { get; set; }
 
         [BsonElement("datePublished")]
         public DateTime DatePublished { get; set; }
@@ -20,10 +20,10 @@ namespace HeathCare.Models
         public string Description { get; set; }
 
         [BsonElement("likes")]
-        public int Likes { get; set; }
+        public int? Likes { get; set; }
 
         [BsonElement("doctorId")]
-        public ObjectId DoctorId { get; set; } // Reference to Doctor
+        public ObjectId? DoctorId { get; set; } // Reference to Doctor
     }
 
 }

@@ -8,16 +8,16 @@ namespace HeathCare.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         [BsonElement("date")]
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
 
         [BsonElement("doctorId")]
-        public ObjectId DoctorId { get; set; } // Reference to Doctor
+        public ObjectId? DoctorId { get; set; } // Reference to Doctor
 
         [BsonElement("patientId")]
-        public ObjectId PatientId { get; set; } // Reference to Patient
+        public ObjectId? PatientId { get; set; } // Reference to Patient
 
         [BsonElement("timeRange")]
         public string TimeRange { get; set; }
