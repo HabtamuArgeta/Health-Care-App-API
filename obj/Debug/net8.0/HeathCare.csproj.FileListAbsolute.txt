@@ -44,3 +44,4 @@ C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCar
 C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare.pdb
 C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare.genruntimeconfig.cache
 C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\ref\HeathCare.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare.sourcelink.json

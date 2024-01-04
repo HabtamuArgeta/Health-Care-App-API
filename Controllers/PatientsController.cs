@@ -44,14 +44,14 @@ namespace HeathCare.Controllers
             if (photo != null)
             {
                 var fileName = $"{patient.Id}_{photo.FileName}";
-                var filePath = Path.Combine("wwwroot", "photos", fileName); // Specify the directory where photos will be saved
+                var filePath = Path.Combine("wwwroot", "photos","Patient", fileName); // Specify the directory where photos will be saved
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await photo.CopyToAsync(fileStream);
                 }
 
-                var photoUrl = $"/wwwroot/photos/{fileName}"; // Constructing the URL where the photo will be accessible
+                var photoUrl = $"/wwwroot/photos/Patient/{fileName}"; // Constructing the URL where the photo will be accessible
 
                 patient.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }

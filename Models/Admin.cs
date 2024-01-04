@@ -8,7 +8,7 @@ namespace HeathCare.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         [BsonElement("name")]
         public string Name { get; set; }
@@ -17,7 +17,7 @@ namespace HeathCare.Models
         public string Address { get; set; }
 
         [BsonElement("dateOfBirth")]
-        public DateTime DateOfBirth { get; set; }
+        public string DateOfBirth { get; set; }
 
         [BsonElement("email")]
         public string Email { get; set; }
