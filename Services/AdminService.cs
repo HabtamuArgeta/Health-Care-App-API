@@ -29,7 +29,19 @@ namespace HeathCare.Services
         {
             return _admins.Find(admin => admin.Id == id).FirstOrDefault();
         }
+        public Admin Authenticate(string username, string password)
+        {
+            var admin = _admins.Find(a => a.UserName == username).FirstOrDefault();
 
+            if (admin != null && admin.Password == password)
+            {
+                // Authentication successful, return the admin details
+                return admin;
+            }
+
+            // If the username or password is incorrect, return null
+            return null;
+        }
         public void Remove(string id)
         {
             _admins.DeleteOne(admin => admin.Id == id);

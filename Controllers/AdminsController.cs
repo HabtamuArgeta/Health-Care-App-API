@@ -1,7 +1,7 @@
 ﻿using HeathCare.Models;
 using HeathCare.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+
 
 namespace HeathCare.Controllers
 {
@@ -37,6 +37,24 @@ namespace HeathCare.Controllers
             return admin;
         }
 
+        [HttpPost("Authenticate")]
+        public IActionResult Authenticate([FromBody] Login login)
+        {
+            var admin = adminService.Authenticate(login.UserName, login.Password);
+
+            if (admin == null)
+            {
+                return Unauthorized("Invalid username or password");
+            }
+
+            // If authentication succeeds, return some token or a success message
+            // You may consider using JWT tokens or other authentication mechanisms here
+
+            // For example, return a success message with the admin details
+            return Ok(new { Message = "Authentication successful", Admin = admin });
+        }
+
+
         // POST: api/Admins
         // POST api/<PatientsController>
         [HttpPost]
@@ -64,13 +82,28 @@ namespace HeathCare.Controllers
 
         // PUT: api/Admins/{id}
         [HttpPut("{id}")]
-        public IActionResult Put(string id, [FromBody] Admin updatedAdmin)
+        public async Task<ActionResult<Admin>> Put(string id, [FromForm] Admin updatedAdmin,IFormFile photo)
         {
             var existingAdmin = adminService.Get(id);
 
             if (existingAdmin == null)
             {
                 return NotFound($"Admin with Id = {id} not found");
+            }
+
+            if (photo != null)
+            {
+                var fileName = $"{updatedAdmin.Id}_{photo.FileName}";
+                var filePath = Path.Combine("wwwroot", "photos", "Admins", fileName); // Specify the directory where photos will be saved
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                     await photo.CopyToAsync(fileStream);
+                }
+
+                var photoUrl = $"/wwwroot/photos/Admins/{fileName}"; // Constructing the URL where the photo will be accessible
+
+                updatedAdmin.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }
 
             adminService.Update(id, updatedAdmin);
@@ -93,5 +126,13 @@ namespace HeathCare.Controllers
 
             return Ok($"Admin with Id = {id} deleted");
         }
+    }
+
+    public class Login
+    {
+        public string UserName { get; set; }
+
+        
+        public string Password { get; set; }
     }
 }

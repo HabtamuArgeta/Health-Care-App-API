@@ -1,0 +1,47 @@
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\appsettings.Development.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\appsettings.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\HeathCare API.staticwebassets.runtime.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\HeathCare API.exe
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\HeathCare API.deps.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\HeathCare API.runtimeconfig.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\HeathCare API.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\HeathCare API.pdb
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\AWSSDK.Core.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\AWSSDK.SecurityToken.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\DnsClient.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\MongoDB.Driver.Core.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\MongoDB.Libmongocrypt.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\SharpCompress.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\Snappier.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\ZstdSharp.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\runtimes\linux\native\libmongocrypt.so
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\bin\Debug\net8.0\runtimes\win\native\mongocrypt.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.csproj.AssemblyReference.cache
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.AssemblyInfoInputs.cache
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.AssemblyInfo.cs
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.csproj.CoreCompileInputs.cache
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.MvcApplicationPartsAssemblyInfo.cs
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.MvcApplicationPartsAssemblyInfo.cache
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.sourcelink.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\staticwebassets.build.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\staticwebassets.development.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.HeathCare API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.build.HeathCare API.props
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HeathCare API.props
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HeathCare API.props
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\scopedcss\bundle\HeathCare API.styles.css
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.csproj.CopyComplete
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\refint\HeathCare API.dll
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.pdb
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\HeathCare API.genruntimeconfig.cache
+C:\Program Files\installed apps\Linux comanned\crzylearning\DotNet Apps\HeathCare\obj\Debug\net8.0\ref\HeathCare API.dll

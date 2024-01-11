@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7V7NsZ7TyXwbgyoGZW7UYPIPvuAc6ooGPCEDoDPCFm7PJNQMQV6Ly1S9Hsb2pE7AX3e/djeCtWIHHqqsy/K5vQ==",
+  "dgSpecHash": "x9dU4XMILJfo/PtegxOKcene/Pg6bdNj+LeT+5bXPUWkTmsF5RwrqJMc9NAFnakQ+cJDHxyb/7KvGLYoHPEP/w==",
   "success": true,
-  "projectFilePath": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\HeathCare.csproj",
+  "projectFilePath": "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HeathCare\\HeathCare API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arget\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\arget\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

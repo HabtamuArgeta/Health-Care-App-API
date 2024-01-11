@@ -11,14 +11,14 @@ namespace HeathCare.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
-        [BsonElement("name")]
-        public string Name { get; set; }
+        [BsonElement("username")]
+        public string UserName { get; set; }
 
         [BsonElement("address")]
         public string Address { get; set; }
 
         [BsonElement("dateOfBirth")]
-        public DateTime DateOfBirth { get; set; }
+        public string DateOfBirth { get; set; }
 
         [BsonElement("email")]
         [EmailAddress]
@@ -33,6 +33,10 @@ namespace HeathCare.Models
 
         [BsonElement("photoUrl")]
         public string? PhotoUrl { get; set; }
+
+        [BsonElement("password")]
+        [Required]
+        public string Password { get; set; }
     }
 
 }
