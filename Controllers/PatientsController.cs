@@ -1,5 +1,6 @@
 ﻿using HeathCare.Models;
 using HeathCare.Services;
+using HeathCare_API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -37,6 +38,23 @@ namespace HeathCare.Controllers
             return patient;
         }
 
+        [HttpPost("Authenticate")]
+        public IActionResult Authenticate([FromBody] Login login)
+        {
+            var patient = patientService.Authenticate(login.UserName, login.Password);
+
+            if (patient == null)
+            {
+                return Unauthorized("Invalid username or password");
+            }
+
+            // If authentication succeeds, return some token or a success message
+            // You may consider using JWT tokens or other authentication mechanisms here
+
+            // For example, return a success message with the admin details
+            return Ok(new { Message = "Authentication successful", Patient = patient });
+        }
+
         // POST api/<PatientsController>
         [HttpPost]
         public async Task<ActionResult<Patient>> Post([FromForm] Patient patient, IFormFile photo)
@@ -63,14 +81,29 @@ namespace HeathCare.Controllers
 
 
         // PUT api/<PatientsController>/5
+
         [HttpPut("{id}")]
-        public IActionResult Put(string id, [FromBody] Patient updatedPatient)
+        public async Task<ActionResult<Patient>> Put(string id,[FromForm] Patient updatedPatient, IFormFile photo)
         {
             var existingPatient = patientService.Get(id);
-
             if (existingPatient == null)
             {
                 return NotFound($"Patient with Id = {id} not found");
+            }
+
+            if (photo != null)
+            {
+                var fileName = $"{updatedPatient.Id}_{photo.FileName}";
+                var filePath = Path.Combine("wwwroot", "photos", "Patients", fileName); // Specify the directory where photos will be saved
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await photo.CopyToAsync(fileStream);
+                }
+
+                var photoUrl = $"/wwwroot/photos/Patients/{fileName}"; // Constructing the URL where the photo will be accessible
+
+                updatedPatient.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }
 
             patientService.Update(id, updatedPatient);

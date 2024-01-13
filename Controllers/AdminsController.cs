@@ -1,5 +1,6 @@
 ﻿using HeathCare.Models;
 using HeathCare.Services;
+using HeathCare_API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -128,11 +129,5 @@ namespace HeathCare.Controllers
         }
     }
 
-    public class Login
-    {
-        public string UserName { get; set; }
-
-        
-        public string Password { get; set; }
-    }
+    
 }

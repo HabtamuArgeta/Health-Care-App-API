@@ -1,5 +1,6 @@
 ﻿using HeathCare.Models;
 using HeathCare.Services;
+using HeathCare_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -37,6 +38,22 @@ namespace HeathCare.Controllers
             return doctor;
         }
 
+        [HttpPost("Authenticate")]
+        public IActionResult Authenticate([FromBody] Login login)
+        {
+            var doctor = doctorService.Authenticate(login.UserName, login.Password);
+
+            if (doctor == null)
+            {
+                return Unauthorized("Invalid username or password");
+            }
+
+            // If authentication succeeds, return some token or a success message
+            // You may consider using JWT tokens or other authentication mechanisms here
+
+            // For example, return a success message with the admin details
+            return Ok(new { Message = "Authentication successful", Doctor = doctor });
+        }
         // POST: api/Doctors
         [HttpPost]
         public async Task<ActionResult<Doctor>> Post([FromForm] Doctor doctor, IFormFile photo)

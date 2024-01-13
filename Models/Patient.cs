@@ -12,7 +12,9 @@ namespace HeathCare.Models
         public string? Id { get; set; }
 
         [BsonElement("name")]
-        public string Name { get; set; }
+        public string UserName { get; set; }
+        [BsonElement("password")]
+        public string Password { get; set; }
 
         [BsonElement("email")]
         [EmailAddress]
@@ -25,11 +27,8 @@ namespace HeathCare.Models
         [BsonElement("photoUrl")]
         public string? PhotoUrl { get; set; }
 
-        [BsonElement("appointments")]
-        public List<ObjectId>? Appointments { get; set; } // References to Appointments
 
-        [BsonElement("chats")]
-        public List<ObjectId>? Chats { get; set; } // References to Chats
+       
     }
 
 }

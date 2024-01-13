@@ -30,6 +30,20 @@ namespace HeathCare.Services
             return _doctors.Find(doctor => doctor.Id == id).FirstOrDefault();
         }
 
+        public Doctor Authenticate(string username, string password)
+        {
+            var doctor= _doctors.Find(d => d.UserName == username).FirstOrDefault();
+
+            if (doctor != null && doctor.Password == password)
+            {
+                // Authentication successful, return the admin details
+                return doctor;
+            }
+
+            // If the username or password is incorrect, return null
+            return null;
+        }
+
         public void Remove(string id)
         {
             _doctors.DeleteOne(doctor => doctor.Id == id);

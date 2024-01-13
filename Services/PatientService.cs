@@ -31,7 +31,21 @@ namespace HeathCare.Services
                 return _patients.Find(patient => patient.Id == id).FirstOrDefault();
             }
 
-            public void Remove(string id)
+        public Patient Authenticate(string username, string password)
+        {
+            var patient = _patients.Find(a => a.UserName == username).FirstOrDefault();
+
+            if (patient != null && patient.Password == password)
+            {
+                // Authentication successful, return the admin details
+                return patient;
+            }
+
+            // If the username or password is incorrect, return null
+            return null;
+        }
+
+        public void Remove(string id)
             {
                _patients.DeleteOne(patient => patient.Id == id);
             }
