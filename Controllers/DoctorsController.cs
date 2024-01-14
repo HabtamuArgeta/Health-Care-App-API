@@ -80,18 +80,33 @@ namespace HeathCare.Controllers
 
         // PUT: api/Doctors/{id}
         [HttpPut("{id}")]
-        public IActionResult Put(string id, [FromBody] Doctor updatedDoctor)
+        public async Task<ActionResult<Doctor>> Put(string id, [FromForm] Doctor updatedDoctor, IFormFile photo)
         {
-            var existingDoctor = doctorService.Get(id);
+            var existingAdmin = doctorService.Get(id);
 
-            if (existingDoctor == null)
+            if (existingAdmin == null)
             {
                 return NotFound($"Doctor with Id = {id} not found");
             }
 
+            if (photo != null)
+            {
+                var fileName = $"{updatedDoctor.Id}_{photo.FileName}";
+                var filePath = Path.Combine("wwwroot", "photos", "Doctors", fileName); // Specify the directory where photos will be saved
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await photo.CopyToAsync(fileStream);
+                }
+
+                var photoUrl = $"/wwwroot/photos/Doctors/{fileName}"; // Constructing the URL where the photo will be accessible
+
+                updatedDoctor.PhotoUrl = photoUrl; // Save the photo URL to the Student model
+            }
+
             doctorService.Update(id, updatedDoctor);
 
-            return Ok($"Doctor with Id = {id} updated");
+            return Ok($"Admin with Id = {id} updated");
         }
 
         // DELETE: api/Doctors/{id}
