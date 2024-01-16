@@ -39,7 +39,7 @@ namespace HeathCare.Controllers
 
         // POST: api/Appointments
         [HttpPost]
-        public async Task<ActionResult<Admin>> Post([FromForm] Appointment appointment)
+        public async Task<ActionResult<Appointment>> Post([FromForm] Appointment appointment)
         {
 
             appointmentService.Create(appointment);
@@ -47,21 +47,22 @@ namespace HeathCare.Controllers
             return CreatedAtAction(nameof(Get), new { id = appointment.Id }, appointment);
         }
 
-        // PUT: api/Appointments/{id}
         [HttpPut("{id}")]
-        public IActionResult Put(string id, [FromBody] Appointment updatedAppointment)
+        public async Task<ActionResult<Appointment>> Put(string id, [FromForm] Appointment updatedAppointment)
         {
-            var existingAppointment = appointmentService.Get(id);
+            var existingappointment = appointmentService.Get(id);
 
-            if (existingAppointment == null)
+            if (existingappointment == null)
             {
                 return NotFound($"Appointment with Id = {id} not found");
             }
+
 
             appointmentService.Update(id, updatedAppointment);
 
             return Ok($"Appointment with Id = {id} updated");
         }
+        // PUT: api/Appointments/{id}
 
         // DELETE: api/Appointments/{id}
         [HttpDelete("{id}")]
