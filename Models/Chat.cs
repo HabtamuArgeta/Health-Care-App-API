@@ -9,15 +9,14 @@ namespace HeathCare.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
+        [BsonElement("doctorUserName")]
+        public string DoctorUserName { get; set; }
+
+        [BsonElement("patientUserName")]
+        public string PatientUserName { get; set; }
 
         [BsonElement("createdAt")]
-        public DateTime CreatedAt { get; set; }
-
-        [BsonElement("doctorId")]
-        public ObjectId? DoctorId { get; set; } // Reference to Doctor
-
-        [BsonElement("patientId")]
-        public ObjectId? PatientId { get; set; } // Reference to Patient
+        public string CreatedAt { get; set; }
 
         [BsonElement("message")]
         public string Message { get; set; }

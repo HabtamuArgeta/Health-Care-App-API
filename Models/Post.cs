@@ -10,20 +10,19 @@ namespace HeathCare.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
+        [BsonElement("doctorUserName")]
+        public string DoctorUserName { get; set; }
+
         [BsonElement("postPhoto")]
         public string? PhotoUrl { get; set; }
 
         [BsonElement("datePublished")]
-        public DateTime DatePublished { get; set; }
+        public string DatePublished { get; set; }
 
         [BsonElement("description")]
         public string Description { get; set; }
 
-        [BsonElement("likes")]
-        public int? Likes { get; set; }
-
-        [BsonElement("doctorId")]
-        public ObjectId? DoctorId { get; set; } // Reference to Doctor
+        
     }
 
 }

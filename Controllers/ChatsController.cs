@@ -47,20 +47,23 @@ namespace HeathCare.Controllers
         }
 
         // PUT: api/Chats/{id}
+      
         [HttpPut("{id}")]
-        public IActionResult Put(string id, [FromBody] Chat updatedChat)
+        public async Task<ActionResult<Chat>> Put(string id, [FromForm] Chat updatedChat)
         {
             var existingChat = chatService.Get(id);
 
             if (existingChat == null)
             {
-                return NotFound($"Chat with Id = {id} not found");
+                return NotFound($"chat with Id = {id} not found");
             }
+
 
             chatService.Update(id, updatedChat);
 
-            return Ok($"Chat with Id = {id} updated");
+            return Ok($"chat with Id = {id} updated");
         }
+
 
         // DELETE: api/Chats/{id}
         [HttpDelete("{id}")]

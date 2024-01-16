@@ -62,7 +62,7 @@ namespace HeathCare.Controllers
 
 
         [HttpPut("{id}")]
-        public IActionResult Put(string id, [FromBody] Post updatedPost)
+        public async Task<ActionResult<Post>> Put(string id, [FromForm] Post updatedPost, IFormFile photo)
         {
             var existingPost = postService.Get(id);
 
@@ -71,10 +71,26 @@ namespace HeathCare.Controllers
                 return NotFound($"Post with Id = {id} not found");
             }
 
+            if (photo != null)
+            {
+                var fileName = $"{updatedPost.Id}_{photo.FileName}";
+                var filePath = Path.Combine("wwwroot", "photos", "Posts", fileName); // Specify the directory where photos will be saved
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await photo.CopyToAsync(fileStream);
+                }
+
+                var photoUrl = $"/wwwroot/photos/Posts/{fileName}"; // Constructing the URL where the photo will be accessible
+
+                updatedPost.PhotoUrl = photoUrl; // Save the photo URL to the Student model
+            }
+
             postService.Update(id, updatedPost);
 
-            return Ok($"Post with Id = {id} updated");
+            return Ok($"Admin with Id = {id} updated");
         }
+
 
         [HttpDelete("{id}")]
         public ActionResult Delete(string id)

@@ -62,7 +62,7 @@ namespace HeathCare.Controllers
 
             return Ok($"Appointment with Id = {id} updated");
         }
-        // PUT: api/Appointments/{id}
+        
 
         // DELETE: api/Appointments/{id}
         [HttpDelete("{id}")]
