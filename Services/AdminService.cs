@@ -25,9 +25,17 @@ namespace HeathCare.Services
             return _admins.Find(admin => true).ToList();
         }
 
-        public Admin Get(string id)
+        public Admin Get(string setntVal)
         {
-            return _admins.Find(admin => admin.Id == id).FirstOrDefault();
+            Admin admin;
+            admin = _admins.Find(admin => admin.UserName == setntVal).FirstOrDefault();
+            if (admin != null)
+            {
+              return admin;
+            }
+            return _admins.Find(a => a.Id == setntVal).FirstOrDefault();
+
+          
         }
         public Admin Authenticate(string username, string password)
         {
@@ -42,6 +50,19 @@ namespace HeathCare.Services
             // If the username or password is incorrect, return null
             return null;
         }
+
+        //public Admin GetByUserName(string username)
+        //{
+        //    var admin = _admins.Find(a => a.UserName == username).FirstOrDefault();
+
+        //    if (admin != null)
+        //    {
+
+        //        return admin;
+        //    }
+        //    return null;
+        //}
+
         public void Remove(string id)
         {
             _admins.DeleteOne(admin => admin.Id == id);

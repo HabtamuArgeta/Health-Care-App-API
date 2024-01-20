@@ -12,11 +12,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\photos\Admins\" />
-    <Folder Include="wwwroot\photos\Doctors\" />
-    <Folder Include="wwwroot\photos\Posts\" />
-    <Folder Include="wwwroot\photos\Patients\" />
-  </ItemGroup>
-
 </Project>

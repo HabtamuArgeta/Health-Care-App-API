@@ -25,14 +25,14 @@ namespace HeathCare.Controllers
         }
 
         // GET: api/Admins/{id}
-        [HttpGet("{id}")]
-        public ActionResult<Admin> Get(string id)
+        [HttpGet("{setntVal}")]
+        public ActionResult<Admin> Get(string setntVal)
         {
-            var admin = adminService.Get(id);
+            var admin = adminService.Get(setntVal);
 
             if (admin == null)
             {
-                return NotFound($"Admin with Id = {id} not found");
+                return NotFound($"Admin with Id = {setntVal} not found");
             }
 
             return admin;
@@ -48,10 +48,6 @@ namespace HeathCare.Controllers
                 return Unauthorized("Invalid username or password");
             }
 
-            // If authentication succeeds, return some token or a success message
-            // You may consider using JWT tokens or other authentication mechanisms here
-
-            // For example, return a success message with the admin details
             return Ok(new { Message = "Authentication successful", Admin = admin });
         }
 
@@ -63,15 +59,16 @@ namespace HeathCare.Controllers
         {
             if (photo != null)
             {
+                var AbsolutePath = "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HealthCareApp\\wwwroot";
                 var fileName = $"{admin.Id}_{photo.FileName}";
-                var filePath = Path.Combine("wwwroot", "photos","Admins", fileName); // Specify the directory where photos will be saved
+                var filePath = Path.Combine(AbsolutePath, "photos","Admins", fileName); // Specify the directory where photos will be saved
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await photo.CopyToAsync(fileStream);
                 }
 
-                var photoUrl = $"/wwwroot/photos/Admins/{fileName}"; // Constructing the URL where the photo will be accessible
+                var photoUrl = $"/photos/Admins/{fileName}"; // Constructing the URL where the photo will be accessible
 
                 admin.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }
@@ -94,17 +91,18 @@ namespace HeathCare.Controllers
 
             if (photo != null)
             {
+                var AbsolutePath = "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HealthCareApp\\wwwroot";
                 var fileName = $"{updatedAdmin.Id}_{photo.FileName}";
-                var filePath = Path.Combine("wwwroot", "photos", "Admins", fileName); // Specify the directory where photos will be saved
+                var filePath = Path.Combine(AbsolutePath, "photos", "Admins", fileName); // Specify the directory where photos will be saved
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                     await photo.CopyToAsync(fileStream);
+                    await photo.CopyToAsync(fileStream);
                 }
 
-                var photoUrl = $"/wwwroot/photos/Admins/{fileName}"; // Constructing the URL where the photo will be accessible
+                var photoUrl = $"/photos/Admins/{fileName}"; 
 
-                updatedAdmin.PhotoUrl = photoUrl; // Save the photo URL to the Student model
+                updatedAdmin.PhotoUrl = photoUrl; 
             }
 
             adminService.Update(id, updatedAdmin);
