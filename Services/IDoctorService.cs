@@ -6,7 +6,7 @@ namespace HeathCare.Services
     {
         List<Doctor> Get();
         Doctor Get(string id);
-       
+        Doctor Search(string UserName);
         Doctor Create(Doctor doctor);
         Doctor Authenticate(string username, string password);
         void Update(string id, Doctor doctor);

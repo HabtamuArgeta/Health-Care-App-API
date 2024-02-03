@@ -1,6 +1,7 @@
 ﻿using HeathCare.Models;
 using HeathCare.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -42,15 +43,16 @@ namespace HeathCare.Controllers
         {
             if (photo != null)
             {
+                var AbsolutePath = "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HealthCareApp\\wwwroot";
                 var fileName = $"{post.Id}_{photo.FileName}";
-                var filePath = Path.Combine("wwwroot", "photos", "Posts", fileName); // Specify the directory where photos will be saved
+                var filePath = Path.Combine(AbsolutePath, "photos", "Posts", fileName); // Specify the directory where photos will be saved
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await photo.CopyToAsync(fileStream);
                 }
 
-                var photoUrl = $"/wwwroot/photos/Posts/{fileName}"; // Constructing the URL where the photo will be accessible
+                var photoUrl = $"/photos/Posts/{fileName}"; // Constructing the URL where the photo will be accessible
 
                 post.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }
@@ -73,15 +75,16 @@ namespace HeathCare.Controllers
 
             if (photo != null)
             {
+                var AbsolutePath = "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HealthCareApp\\wwwroot";
                 var fileName = $"{updatedPost.Id}_{photo.FileName}";
-                var filePath = Path.Combine("wwwroot", "photos", "Posts", fileName); // Specify the directory where photos will be saved
+                var filePath = Path.Combine(AbsolutePath, "photos", "Posts", fileName); // Specify the directory where photos will be saved
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await photo.CopyToAsync(fileStream);
                 }
 
-                var photoUrl = $"/wwwroot/photos/Posts/{fileName}"; // Constructing the URL where the photo will be accessible
+                var photoUrl = $"/photos/Posts/{fileName}"; // Constructing the URL where the photo will be accessible
 
                 updatedPost.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }

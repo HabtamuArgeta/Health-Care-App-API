@@ -34,7 +34,6 @@ namespace HeathCare.Controllers
             {
                 return NotFound($"Admin with Id = {setntVal} not found");
             }
-
             return admin;
         }
 

@@ -25,11 +25,29 @@ namespace HeathCare.Services
             return _doctors.Find(doctor => true).ToList();
         }
 
-        public Doctor Get(string id)
+        public Doctor Get(string setntVal)
         {
-            return _doctors.Find(doctor => doctor.Id == id).FirstOrDefault();
+            Doctor doctor;
+            doctor = _doctors.Find(doctor => doctor.UserName == setntVal).FirstOrDefault();
+            if (doctor != null)
+            {
+                return doctor;
+            }
+            return _doctors.Find(a => a.Id == setntVal).FirstOrDefault();
         }
 
+
+        public Doctor Search(string UserName)
+        {
+            Doctor doctor;
+            doctor  = _doctors.Find(doctor => doctor.UserName == UserName).FirstOrDefault();
+            if (doctor != null)
+            {
+                return doctor;
+            }
+            return null;
+            
+        }
         public Doctor Authenticate(string username, string password)
         {
             var doctor= _doctors.Find(d => d.UserName == username).FirstOrDefault();

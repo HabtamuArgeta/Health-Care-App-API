@@ -3,6 +3,7 @@ using HeathCare.Services;
 using HeathCare_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace HeathCare.Controllers
 {
@@ -25,14 +26,27 @@ namespace HeathCare.Controllers
         }
 
         // GET: api/Doctors/{id}
-        [HttpGet("{id}")]
-        public ActionResult<Doctor> Get(string id)
+        [HttpGet("{setntVal}")]
+        public ActionResult<Doctor> Get(string setntVal)
         {
-            var doctor = doctorService.Get(id);
+            var doctor = doctorService.Get(setntVal);
 
             if (doctor == null)
             {
-                return NotFound($"Doctor with Id = {id} not found");
+                return NotFound($"Doctor with Id = {setntVal} not found");
+            }
+
+            return doctor;
+        }
+
+        [HttpGet("ByUserName/{UserName}")]
+        public ActionResult<Doctor> GetByUserName(string UserName)
+        {
+            var doctor = doctorService.Search(UserName);
+
+            if (doctor == null)
+            {
+                return NotFound($"Doctor with UserName = {UserName} not found");
             }
 
             return doctor;
@@ -60,15 +74,16 @@ namespace HeathCare.Controllers
         {
             if (photo != null)
             {
+                var AbsolutePath = "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HealthCareApp\\wwwroot";
                 var fileName = $"{doctor.Id}_{photo.FileName}";
-                var filePath = Path.Combine("wwwroot", "photos", "Doctors", fileName); // Specify the directory where photos will be saved
+                var filePath = Path.Combine(AbsolutePath, "photos", "Doctors", fileName); // Specify the directory where photos will be saved
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await photo.CopyToAsync(fileStream);
                 }
 
-                var photoUrl = $"/wwwroot/photos/Doctors/{fileName}"; // Constructing the URL where the photo will be accessible
+                var photoUrl = $"/photos/Doctors/{fileName}"; // Constructing the URL where the photo will be accessible
 
                 doctor.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }
@@ -91,15 +106,16 @@ namespace HeathCare.Controllers
 
             if (photo != null)
             {
+                var AbsolutePath = "C:\\Program Files\\installed apps\\Linux comanned\\crzylearning\\DotNet Apps\\HealthCareApp\\wwwroot";
                 var fileName = $"{updatedDoctor.Id}_{photo.FileName}";
-                var filePath = Path.Combine("wwwroot", "photos", "Doctors", fileName); // Specify the directory where photos will be saved
+                var filePath = Path.Combine(AbsolutePath, "photos", "Doctors", fileName); // Specify the directory where photos will be saved
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await photo.CopyToAsync(fileStream);
                 }
 
-                var photoUrl = $"/wwwroot/photos/Doctors/{fileName}"; // Constructing the URL where the photo will be accessible
+                var photoUrl = $"/photos/Doctors/{fileName}"; // Constructing the URL where the photo will be accessible
 
                 updatedDoctor.PhotoUrl = photoUrl; // Save the photo URL to the Student model
             }
